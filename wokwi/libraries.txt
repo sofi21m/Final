@@ -1,0 +1,5 @@
+# Librerías del proyecto en Wokwi (pestaña Library Manager)
+DHT sensor library for ESPx
+PubSubClient
+ArduinoJson
+ESP32Servo

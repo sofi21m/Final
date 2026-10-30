@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "ClimaWear Smart",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -105.3, "left": 196.2, "attrs": { "temperature": "19", "humidity": "85" } },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 128, "left": 192.8, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": -2, "left": -230.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+
+    [ "dht1:VCC", "esp:3V3", "red", [] ],
+    [ "dht1:GND", "esp:GND.2", "black", [] ],
+    [ "dht1:SDA", "esp:15", "green", [] ],
+
+    [ "ldr1:VCC", "esp:3V3", "red", [] ],
+    [ "ldr1:GND", "esp:GND.2", "black", [] ],
+    [ "ldr1:AO", "esp:34", "orange", [] ],
+
+    [ "servo1:V+", "esp:5V", "red", [] ],
+    [ "servo1:GND", "esp:GND.1", "black", [] ],
+    [ "servo1:PWM", "esp:13", "blue", [] ]
+  ],
+  "dependencies": {}
+}

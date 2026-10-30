@@ -1,0 +1,6 @@
+streamlit>=1.40
+paho-mqtt>=2.0
+gTTS>=2.5
+streamlit-mic-recorder>=0.0.8
+google-genai>=1.0
+Pillow>=10.0
